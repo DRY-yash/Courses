@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    <!-- 
+        !What's inside this tag?
+                *Actually anything inside this tag will not show up on the webpage instead it is used for giving information and metadata about this webpage.  
+        -->
+    <title>HTML CSS Course</title>
+</head>
+
+<body>
+    <!-- !Anyting inside this tag show up on the website -->
+
+    <!-- !headings(Total : 6) -->
+    <h1>Welcome</h1>
+    <h2>Welcome</h2>
+    <h3>Welcome</h3>
+    <h4>Welcome</h4>
+    <h5>Welcome</h5>
+    <h6>Welcome</h6>
+
+    <!-- !Paragraphs -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, unde!</p>
+
+    <!-- !HTML Text Formatting -->
+    <b>Bold Text</b>
+    <strong>Important Text</strong>
+    <i>Italic Text</i>
+    <u>Underline Text</u>
+    <em>Emphasized Text</em>
+    <mark>marked Text</mark>
+    <small>Small Text</small>
+    <del>Deleted Text</del>
+    <sub>Subscript Text</sub>
+    <sup>SuperScript Text</sup>
+    <br>Line break : self closing.
+    <hr>Horizontal Line
+    <br>
+
+    <!--
+         !Things to keep in mind
+            *Some tags & elements have been eleminated in HTML5 
+            *HTMl5 and CSS5 will be discussed in another file.
+    -->
+
+    <!-- 
+        !Tag
+            !<h1></h1>
+            *Two types =
+            ?   -empty/self closing.
+            ?   - opeing & closing tag. 
+
+            *Empty tag =
+                ? - don't require a closing tag </>.
+
+            *Opening & Closing Tag =
+                ? - require an opening <> and closing </> tag.    
+
+        !Elements
+            !<h1>DATA</h1>
+            *Tags with desired data.
+            *Named after tags like h1 element , p element.
+            
+    -->
+
+    <!--
+        !HTML links
+            !<a href = "">Thapa Technical</a>
+            *<a> anchor tag , href , Linked Text </a>.
+                ?target="self" : can be used to open link on the same tab.
+                ?target="_blank" : can be used to open link on new tab.
+                ?by default the text under anchor tag is underlined.
+                ?title="" : can be used to give description on hover.
+
+            !<button><a href = "">Thapa Technical</a></button>
+            *anchor tag also be used under a button tag.
+    -->
+    <a href="google.com" target="_blank" title="google link">Hyper link</a>
+
+    <!-- 
+        !HTML Images
+            !<img src="">
+                *src="file path".
+                *Image tag is used to insert images in webpage.
+                    ?Empty tag : no need to close.
+                    ?width and height : attribute can be used inside an image tag(<img>);
+                    ?title="": attribute can also be used in this tag, to give description about the image.
+                    ?alt="" : tag can be used to alternative text for the image.
+     -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Ben_10_logo.svg/1200px-Ben_10_logo.svg.png"
+        alt="image example" title="" width="300" height="300">
+    <!-- 
+        !HTML Tables
+            *<table></table> : tag will be used.
+                ?border="" : attribute is used to give border.
+            *Cell
+                ?Each individual cross section on rows and columns are called cells.
+                ?Space inside cell is known as cell padding.
+                ?Space outside cell is known as cell spacing.
+                ?colspan="" : attribute can be used to give more columns to element.
+                ?rowspan="" : attribute can be used to give more rows to element.
+                
+            *<center></center> : tag can be used to center the element.
+    
+    -->
+    <table border="1" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>Youtube Name</th>
+            <th>Topic</th>
+            <th>Degree</th>
+            <th colspan="2">Subscribers</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Thapa</td>
+            <td>Programming</td>
+            <td>MSC</td>
+            <td colspan="2">1k</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Thapa</td>
+            <td>Programming</td>
+            <td>MSC</td>
+            <td colspan="2">1k</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Thapa</td>
+            <td>Programming</td>
+            <td>MSC</td>
+            <td colspan="2">1k</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Thapa</td>
+            <td>Programming</td>
+            <td>MSC</td>
+            <td colspan="2">1k</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Thapa</td>
+            <td>Programming</td>
+            <td>MSC</td>
+            <td colspan="2">1k</td>
+        </tr>
+
+    </table>
+
+    <!-- 
+        !HTML Lists
+            *Two typer of lists -
+                !<UL>(un ordered list).
+                    ?Type values = circle , disk , square.
+                !<OL>(ordered list).
+                    ?Type values = 1 , i , I , A , a
+            *List items will be added through <li> tag
+                !<li></li>
+    
+    -->
+    <ul type="circle">
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+
+    <ol type="I">
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ol>
+
+
+    <!-- 
+        !Form 
+        *<form></form> tag is used
+        *<input> tag is used to make an input.
+            ?self closing tag.
+            ?type="text" can be used to take various types of inputs.
+            !inputs types = text, email, password, number, radio and checkbox.
+            ?placeholder="" is the default text shown on the input.
+        *<select> tag is used to make an option input type.
+            ?<option value=""> : tag is used to give various options.
+
+        *<textarea> tag is used to take keyboard typed inputs in html forms.
+            ?cols="" : attribute to give no. Of columns.
+            ?rows="" : attribute to give no. Of rows.
+        !NOTE: name attribute is used to make two tags same so as if one tag is selected the other automatically gets cleaned.
+            *eg:- 
+    -->
+
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <!-- !NOTE: email input type was introduced in html5 -->
+        <input type="number" placeholder="Number">
+        <br>
+        <select>
+            <option>Select ur Plan</option>
+            <option value="personal">Personal</option>
+            <option value="premium">Premium</option>
+        </select>
+
+
+        <input type="radio">Male
+        <input type="radio">Female
+        <br>
+
+        <!-- !NOTE: to select only one of the option pass the same name attribute value to input tags -->
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <br>
+        <textarea name="user" cols="30" rows="10"></textarea>
+
+        <p>The above information entered is correct and I concent</p>
+        <input type="checkbox">Yes I've read it all.
+
+        <br><br>
+        <input type="submit" value="click">
+
+
+    </form>
+
+
+
+
+
+
+</body>
+
+
+</html>

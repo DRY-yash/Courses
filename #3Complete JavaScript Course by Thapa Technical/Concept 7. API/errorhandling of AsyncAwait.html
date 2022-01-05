@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fetch API Using Async Await with error handling</title>
+	</head>
+	<body>
+		<div class="container"></div>
+		<script>
+			async function getCovidApi() {
+				try {
+					const jsondata = await fetch('https://api.covid19api.com/summary');
+					const actualdata = await jsondata.json();
+					document.querySelector('.container').innerHTML =
+						actualdata.Countries[76].Country;
+				} catch (error) {
+					console.log(`The Error : ${error}`);
+				}
+			}
+			getCovidApi();
+		</script>
+	</body>
+</html>

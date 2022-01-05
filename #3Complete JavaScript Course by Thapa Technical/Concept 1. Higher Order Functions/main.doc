@@ -1,0 +1,11 @@
+🔔 main(), reduce(), and filter() are higher order functions.
+
+1. Map()
+- Used to transform an array
+- transform means to transform the elements of an array to another array.
+
+2. reduce()
+- reduce method reduce all elements of the original array into single.
+
+3. filter()
+- transform elements from an array on some condition.

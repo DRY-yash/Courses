@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+
+<body>
+    <script>
+        /*Higher Order Function*/
+        /*A function return another function*/
+        const interviewQ = (name) => {
+            if (name === `vinod`) {
+                return function (topic) {
+                    console.log(`Hii ${name}. What is ${topic}?, Plz explain us.`);
+                }
+            }
+            if (name === `thapa`) {
+                return function (topic) {
+                    console.log(`Hii ${name}. What is ${topic}?, Plz explain us.`);
+                }
+            }
+            if (name === `technical`) {
+                return function (topic) {
+                    console.log(`Hii ${name}. What is ${topic}?, Plz explain us.`);
+                }
+            }
+            else {
+                return function () {
+                    console.log(`Welcome to interview.`);
+                }
+            }
+        }
+
+        interviewQ(`vinod`)(`UI`);
+        interviewQ(`thapa`)(`Full Stack Dev`);
+        interviewQ(`technical`)(`Front End Developer`);
+        interviewQ(`Yash`)();
+
+        console.log(`============ * =============`) //seperator 😊
+        //to ask multiple questions(pass multiple argument)
+        const cand1 = interviewQ(`vinod`);
+        cand1(`UI`);
+        cand1(`Ux`);
+        cand1(`JavaScript`);
+    </script>
+</body>
+
+</html>

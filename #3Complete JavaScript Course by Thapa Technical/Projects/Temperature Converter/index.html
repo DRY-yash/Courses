@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Temperature Convert</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+			* {
+				box-sizing: border-box;
+				margin: 0%;
+				padding: 0%;
+				font-family: 'Dosis', sans-serif;
+			}
+			body {
+				min-height: 100vh;
+				width: 100vw;
+				display: grid;
+				place-items: center;
+				align-items: center;
+				text-align: center;
+				background-color: bisque;
+			}
+			.container {
+				background-color: rosybrown;
+				color: #333;
+				padding: 50px 100px;
+				border: none;
+				border-radius: 15px;
+				box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+			}
+			form {
+				padding: 20px;
+			}
+			select {
+				margin: 20px;
+				text-transform: uppercase;
+			}
+			.box {
+				padding: 10px 15px;
+				width: 100px;
+				outline: none;
+				border: none;
+				box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+			}
+			#submit {
+				cursor: pointer;
+				background-color: black;
+				color: #fff;
+				font-weight: 500;
+				text-transform: uppercase;
+			}
+			#submit:hover {
+				transform: scale(0.98);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2 id="heading">Please enter the temperature you'd like to convert.</h2>
+			<form action="" onsubmit="calculateTemp(); return false">
+				<input type="number" class="box" id="inputbox" />
+				<select name="" id="select" class="box">
+					<option value="Celcius">Celcius</option>
+					<option value="Farenheit">Farenheit</option>
+				</select>
+				<br />
+				<input type="submit" value="Convert" class="box" id="submit" />
+			</form>
+			<h3 id="result">Enter Value</h3>
+		</div>
+		<script>
+			const celcius = (num, option) => {
+				const c = Math.round(((num - 32) * 5) / 9);
+				document.querySelector('#result').innerHTML = `${c} °Farenheit`;
+			};
+			const farenheit = (num, option) => {
+				const f = Math.round((num * 9) / 5 + 32);
+				document.querySelector('#result').innerHTML = `${f} °Celcius`;
+			};
+			const calculateTemp = () => {
+				const inputNumber = document.querySelector('#inputbox').value;
+				const selectTemp = document.querySelector('#select');
+				// 👇 Important line
+				const selectOption = selectTemp.options[selectTemp.selectedIndex].value;
+				console.log(selectOption);
+				if (selectOption == 'Celcius') {
+					celcius(inputNumber, selectOption);
+				}
+				if (selectOption == 'Farenheit') {
+					farenheit(inputNumber, selectOption);
+				}
+			};
+		</script>
+	</body>
+</html>

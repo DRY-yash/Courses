@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Ivoked Fucntion Expression</title>
+</head>
+
+<body>
+    <script>
+        /*Immediately Ivoked Fucntion Expression*/
+        /*
+        1. Is a javascript function that runs as soon as it is defined.
+
+        2. It is a self executing anonymous function
+        */
+
+        function authorname() {
+            console.log(`Author name is Vinod`);
+        }
+
+        authorname();
+
+        //iife ex:-
+        (function () {
+            var aName = `thapa`;
+            console.log(`Author name is, ${aName}`);
+        })
+            (); //this is private function (iife);
+
+        console.log(aName); //now aName cannot be accesed as it is in private function.
+
+        
+    </script>
+</body>
+
+</html>

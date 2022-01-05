@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fetch api using promises only</title>
+	</head>
+	<body>
+		<div class="container"></div>
+		<script>
+			fetch('https://api.covid19api.com/summary')
+				.then((apidata) => {
+					console.log(apidata);
+					return apidata.json();
+				})
+				.then((actualdata) => {
+					console.log(actualdata);
+					// 👇 Using it we can get info of INDIA
+					console.log(actualdata.Countries[76]);
+					console.log(actualdata.Countries[76].Country);
+					console.log(actualdata.Countries[76].NewConfirmed);
+					console.log(actualdata.Countries[76].NewDeaths);
+					console.log(actualdata.Countries[76].TotalConfirmed);
+
+					document.querySelector(
+						'.container'
+					).innerHTML = `In ${actualdata.Countries[76].Country} new Covid19 cases are ${actualdata.Countries[76].NewConfirmed} and total deaths today are ${actualdata.Countries[76].NewDeaths}`;
+				})
+				.catch((error) => {
+					console.log('ERROR');
+				});
+		</script>
+	</body>
+</html>

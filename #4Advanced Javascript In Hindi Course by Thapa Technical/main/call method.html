@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Method</title>
+</head>
+
+<body>
+    <script>
+        /*Call{} Method*/
+        /*
+        1.The call method is predefined in JavaScript method.
+        2. With call, an object can use a method belonging to another object.
+        */
+        const youtuber1 = {
+            name: `ThapaTechnical`, //this is an object
+            content: `Programming`,
+            feature: function (rating) {    //this is a method
+                console.log(`very friendly way of teaching. ${this.name} is my fav ${this.content} channel. I would love to give rating of ${rating}.`);
+            }
+        }
+
+        youtuber1.feature(5);   //has an argument 5
+
+        const youtuber2 = {
+            name: `DevEd`,
+            content: `programming`
+        }
+
+        youtuber1.feature.call(youtuber2);  //in this example youtuber2 object used features method of another object that is youtuber1.                          //also there is no argument so the default argument will become undefined.
+
+
+        //to give arguments to the parameters passed to 1st method you need to write ==>
+        youtuber1.feature.call(youtuber2, 5) //by using comma we pass the arguments to the parameters.
+                                            //has an argument 5
+    </script>
+</body>
+
+</html>

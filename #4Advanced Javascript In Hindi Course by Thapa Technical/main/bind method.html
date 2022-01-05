@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Method </title>
+</head>
+
+<body>
+    <script>
+        /*Bind Method*/
+        /*
+        1. by this method we can bind an object to a common function, so that the function gives different result when its needed.
+        */
+
+        const youtuber = {
+            name: `thapatechnical`,
+            content: `programming`,
+        };
+        const youtuber1 = {
+            name: `thapatechnical1`,
+            content: `programming1`,
+        };
+        const youtuber2 = {
+            name: `thapatechnical2`,
+            content: `programming2`,
+        };
+
+        function feature(rating) {
+            console.log(`My fav youtuber is ${this.name}. He makes videos on ${this.content} topics. I will love to give ${rating} star rating`);
+        };
+
+        //we can bind this fucntion to different objects using bind() method.
+
+        let you1 = feature.bind(youtuber1);
+        you1();
+
+        //to use arguments
+        let you2 = feature.bind(youtuber2);
+        you2(5);
+
+    </script>
+</body>
+
+</html>

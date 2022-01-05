@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>HTML5</title>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+	</style>
+
+	<body>
+		<!-- some new elements -->
+		<!-- details tag -->
+		<details>
+			<summary>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia
+			</summary>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+				laboriosam ipsum totam! Possimus voluptas, assumenda, ea, amet obcaecati
+				autem molestias nihil architecto sed nam consectetur. Ex harum voluptate
+				ipsam. Repellendus, unde ipsum beatae itaque totam delectus sapiente
+				assumenda vel nostrum.
+			</p>
+		</details>
+
+		<!-- figure , figcation tag-->
+		<figure>
+			<img
+				src="https://images.unsplash.com/photo-1626318291075-17d488564b0b?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+				alt="image"
+			/>
+
+			<figcaption>Boy with cool hair</figcaption>
+		</figure>
+
+		<!-- *Progress -->
+		Download Progress:
+		<progress value="22" max="100"></progress>
+
+		<!-- *Word Break -->
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possi<wbr />mus
+			cumque harum rem a molestias odio, ver<wbr />itatis error explicabo ipsa
+			corrupti.
+		</p>
+		<br />
+
+		<!-- Semantic Elements  -->
+		<!-- make a box - model  -->
+		<header>
+			<h2>Thapa Technical Times</h2>
+		</header>
+		<nav>
+			<ul>
+				<li>News</li>
+				<li>Sport</li>
+				<li>World</li>
+				<li>India</li>
+				<li>Jagran Josh</li>
+			</ul>
+		</nav>
+		<section>
+			<h2>News Section</h2>
+			<article>
+				<h2>News Article</h2>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+					reiciendis eligendi pariatur odio sequi eveniet, animi quidem quod
+					vitae id. Magni illo tenetur earum perferendis cumque, similique
+					architecto. Nulla, enim!
+				</p>
+			</article>
+			<article>
+				<h2>News Article</h2>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+					reiciendis eligendi pariatur odio sequi eveniet, animi quidem quod
+					vitae id. Magni illo tenetur earum perferendis cumque, similique
+					architecto. Nulla, enim!
+				</p>
+			</article>
+		</section>
+		<footer>
+			<p>&copy; 2019 Thapa Technical Times. All rights reserved.</p>
+		</footer>
+
+		<!-- Input Types -->
+		<form>
+			COLOR: <input type="color" /><br /><br />
+			DATE: <input type="date" /><br /><br />
+			TIME: <input type="time" /><br /><br />
+			Date-Time: <input type="datetime-local" name="" id="" /><br /><br />
+			EMAIL: <input type="email" /><br /><br />
+			<!-- required attribute can be used to make the input required -->
+			MONTH: <input type="month" /><br /><br />
+			<!-- NUMBER: <input type="number" name="" id=""><br><br> -->
+			NUMBER UPTO 5: <input type="number" min="1" max="5" /><br /><br />
+			RANGE: <input type="range" /><br /><br />
+			URL: <input type="url" /><br /><br />
+			TEL: <input type="tel" /><br /><br />
+			<!-- nothing happens with tel it's just for the developer POV to make this input for telephone number. -->
+			PRESS TO SUBMIT: <input type="submit" value="Submit" />
+		</form>
+
+		<!-- HTML Canvas  -->
+		<!-- line -->
+		<canvas
+			id="canvasLine"
+			width="500"
+			height="500"
+			style="border: 2px solid #000"
+		></canvas>
+
+		<!-- rectangle -->
+		<canvas
+			id="canvasRect"
+			width="578"
+			height="200"
+			style="border: 2px solid #000"
+		></canvas>
+		<script type="text/javascript">
+			// Script to make line
+			let c = document.getElementById('canvasLine');
+			let ctx = c.getContext('2d');
+			ctx.moveTo(0, 0);
+			ctx.lineTo(500, 500);
+			ctx.stroke();
+
+			// !Script to make rectangle
+			let canvas2 = document.getElementById('canvasRect');
+			let context = canvas2.getContext('2d');
+
+			context.beginPath();
+			context.rect(100, 50, 200, 100);
+			context.fillstyle = 'green';
+			context.fill();
+			context.lineWidth = 2;
+			context.strokeStyle = 'black';
+			context.stroke();
+
+			// ⬆️ Canvas is still left to practice
+		</script>
+
+		<!-- SVG Graphics -->
+		<svg></svg>
+
+		<!-- ⬆️ SVG Need Practice -->
+
+		<!-- 🎶Audio🎶 -->
+		<h1>Music Player</h1>
+		<audio src="Tiësto - BOOM.mp3" type="audio/mp3" controls></audio>
+		<!-- NOTE: ☝️ for the audio to display we need the remote that is 'controls' attribute -->
+
+		<!-- 📽️Video📽️ -->
+		<h1>Video Player</h1>
+		<video
+			src="demo.mp4"
+			type="video/mp4"
+			controls
+			height="300"
+			width="300"
+			muted
+			autoplay
+            loop
+		></video>
+
+
+	</body>
+</html>

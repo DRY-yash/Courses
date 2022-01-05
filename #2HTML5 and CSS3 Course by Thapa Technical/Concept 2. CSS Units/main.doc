@@ -1,0 +1,20 @@
+CSS UNITS
+
+1. Declaring font size -> rem / em
+    - Default 16px;
+    - 
+
+2. Setting width -> vw / ch
+    - equalt to width of one text character.
+    - uses : to set max-width to 45ch which equals to 45 chars.
+    making it easier to read.
+
+3. Declaring a height -> vh / 
+
+4. Padding or Marigin -> em / rem
+    - uses : use em for padding for buttons , set the font-size and use em as a padding unit which will make it more easier to make good buttons.
+
+5. Media queries -> em 
+
+6. Other media queries?
+    - mostly em , rem and ch are enough.

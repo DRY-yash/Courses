@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Method</title>
+</head>
+
+<body>
+    <script>
+        /* Apply Method */
+        /*
+        1.  Same as Call Method the only difference is that the call method takes arguments separately(,) , but apply method uses array([]);
+        */
+        //we are taking the same example -
+        const youtuber1 = {
+            name: `ThapaTechnical`, //this is an object
+            content: `Programming`,
+            feature: function (rating) {    //this is a method
+                console.log(`very friendly way of teaching. ${this.name} is my fav ${this.content} channel. I would love to give rating of ${rating}.`);
+            }
+        }
+
+        const youtuber2 = {
+            name: `DevEd`,
+            content: `programming`
+        }
+
+        youtuber1.feature.apply(youtuber2, [5, `subscribe`]);
+    </script>
+</body>
+
+</html>

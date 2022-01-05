@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f() is a first class citizer</title>
+</head>
+
+<body>
+    <script>
+        /*"Function is First Class Citizens"*/
+        /*1. Pass a function to a variable*/
+        const thankYou = function () {
+            console.log("Thank you so much for your love and support")
+        }
+        thankYou(); //variable thankYou becomes a function. This proves that we can assign a funcion to a variable.
+
+        /*2. Pass a funcion to an object*/
+        const youtube = {
+            name: "ThapaTechnical",
+            qualify: function () {
+                console.log("I did BCS and MCS");
+            }
+        }
+        youtube.qualify(); // We can also assign a fucntion to an object.
+
+        /*3. Pass a function as an argument*/
+        // thankYou(5,5); 5 and 5 are called argument.
+
+        const myName = () => {
+            return "Hello";
+        }
+
+        const greeting = (sayHi, name) => {
+            console.log(sayHi() + name);
+        }
+
+        greeting(myName, " ThapaTechnical"); // So we can pass function as an argument also called callback function, Here myName is an callback function.
+
+        /*4. Returning functions.*/
+        function x() {
+            return function y() {
+                console.log("Fucntion in fucntion");
+            }
+        }
+
+        x()(); //we need to use double parenthesis to call a function inside a funcion. And in this way we can use funcion in function.
+    </script>
+</body>
+
+</html>

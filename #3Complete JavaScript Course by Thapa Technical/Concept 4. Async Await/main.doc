@@ -1,0 +1,16 @@
+1. Synchronous JavaScript & Asynchronous JavaScript
+1.1 Synchronous JavaScript
+    - Doesn't do the next action until the previous code is executed.
+    - does in order.
+
+
+1.2 Asynchronous JavaScript
+    - Does all the work without waiting for any previous aciton.
+
+1.3 Async / Awaits
+    - determines how to write the promises consume (getting) in simple and easy way.
+    - Syntax async function *function name* () {};
+    - async before a function tells a function to return promises.
+    - await tells a function to wait for sometimes.
+
+    - 🙏 Note : Avait tells function to wait for sometime to get the value if the value will be given after some time like if we are using setTimeout() method on it.

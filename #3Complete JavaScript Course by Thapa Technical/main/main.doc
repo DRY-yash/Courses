@@ -1,0 +1,691 @@
+1. What is JavaScript?
+    - JavaScript is a text based programming language used both on the client side and server-side that allows you to make web pages interactive.
+
+2. Why JavaScript?
+    - JavaScript improves the user experience of the webpage by converting it from static webpage into an interactive one.
+    - JavaScript adds behaviour to web page.
+
+3. How front-end works?
+    - AKA client side. 
+    - HTML, CSS and JavaScript.
+
+4. alert('');
+    - creates a pop up in the browser.
+
+5. console.log('');
+    - consoles the code in the browser.
+
+6. Variables in JavaScript.
+    - properties ->
+        - created using var, let or const followed by variable name = object.
+        ex:-var myName = 'vinod';
+
+        - 📝NOTE: Camel Case convention is used to write variable names in JavaScript.
+
+        - The first character must be a letter or underscore(_) or dollar($).
+            - number is  not allowed as the first character.
+        
+        - Space is not allowed.
+
+        - Variables names are case sensitive.
+
+        - No limit to lenght of variable name.
+
+        - can't use reserved keywords of JavaScript.
+            - ex:- var var = 26;    - it is wrong.
+
+7. Datatypes in JavaScript
+    - properties ->
+        - Six Datatypes that are primitives(main),
+        - undefined 
+        - boolean
+        - number 
+        - string
+        - bigint - in ecmascript 2020
+        - symbol - in ecmascript 2020
+
+📝NOTE: Non primitive Datatypes include arrays, objects.
+📝NOTE: Adding strings using '+' operator is known as concatenaion.
+
+8. typeof();
+    - datatype of value assigned.
+    - ex:- console.log(typeof(anyvar));
+
+9. Some observations in JavaScript
+    - 9 - '5' returns 4 which is not right because 9 is a number and 5 is a string , 📝NOTE: it is a bug.
+
+    - 'vinod' - 'thapa' returns NaN(not a number).
+
+    - true + true returns '2'. 📝NOTE: in JavaScript 1 represents true 0 represents false, thats why the answer is 2.
+
+
+10.  Difference b/w null vs undefined?
+    - null = 
+    - undefined = no value assigned at this particular time , but may be assigned in the future . It is like a standby variable value;
+
+11. What is NaN?
+    - initial value is Not-A-Number.
+    - when we try to add two strings 
+    - properties ->
+        - isNaN() (is used to check if the variable is string. returns true or false).
+
+12. Expressions and Operators
+    - properites ->
+        - 5 + 20 
+         Here 5 is operand , '+' is operator , 20 is operand.
+         operators and operand is called an expression.
+        
+        - Six types of operators 
+            - Assignment (=) operator.
+                - Assigns a value to a variable.
+
+            - Arithmetic ( + , - , * , / , % ) operator.
+                - Perfoms arithmetic(maths) on numbers, constants or variables.
+
+            - Increment (++) operator & Decrement (--) operator.
+                - increments or decrements value by 1.
+                📝NOTE: prefix(++x or --x) - adds 1 before operation.
+                📝NOTE postfix(x++ or x--) - adds 1 after operation.
+
+            - Comparison ( < , > , <=, >= ) operator.
+                - returns a logical value based on whether the comparison is true of false.
+
+
+            - Logical ( &&[and],  ||[or], ![not] ) operator.
+                - typically used with Boolean values.
+                - &&[and] operator returns true if the whole expression returns a true value.
+                - ||[or] operator returns true if any one expression is true.
+                - ![not] operator true becomes false and false becomes true.
+
+            - String ('' + '') operator.
+                - aka concatenaion operator.
+                - the operation is known as concatenaion.
+
+            - Conditional (ternary operator)(if , else, elseif).
+
+            📝NOTE: Difference b/w '==' and '===' is that 
+                - if we check 5 == '5' => true.
+                - if we check 5 === '5' => false.
+
+13. Control Statements & Loops
+    properites ->
+        - if..else 
+            - The if Statement executes a statement if a specified condition is truthy.
+            - If the condition is falsy, another statement can be executed.
+
+        📝NOTE: Falsy values are :- 0, '', undefined, null, NaN
+        📝NOTE: when we make an if statement with condition like this ->
+                if(score = Falsy Values(0, '', undefined, null)){
+                    console.log('something');
+                }
+                else{
+                    console.log('something');
+                }
+        -> JavaScript will automatically skip the if part and run the code in the else statemtent.
+
+        - Switch
+        - While Loop
+            - The while loop statement creates a loop that executes a specified statement as long as the test condition evaluates to true.
+            - Block Scope : the area withing if,switch conditions or for , while Loops;
+            - while loop first checks the condition then enters it's block scope.
+            - if the condition is false it will not even enter the block scope to take any value 😊;
+
+        - Do-While Loop
+            👿 There is a big Difference between while and do while loop . 👿
+            - It is just opposite of while loop, dowhile loop first gives output then checks the condition.
+            - It doesn't matter what the first output is , as it will always show even without satisfying the condition, the first time.
+
+        - For Loop
+            - For loop is the new and better way to do the while and do while loop statements.
+            - Syntax :- for(initializer; condition; iteration){
+                //Code to be executed.         
+            }
+            - Meaning :- 
+                initializer(variable intialize) => var num = 10;
+                condition(the given condition) => num < 10;
+                iteration(how many times) => num++;
+            - Works like while loop , checks condition first.
+
+        - For in Loop(used in array).
+            - After ES6 we have for..in and for..of loop
+            - for in provides the index no of all the elemnts present in an array.
+                - e.g-> for(elements in friends){};
+                 ☝️It will provide index no -> 0,1,2,3.
+
+        - For of Loop(also used in array).
+            - same as for in just only and only one difference is it has of inplace of in 😂.
+                - e.g-> for(elemnts of friends){};
+
+        - ForEach() Loop 🤯 the main event!!!
+            - calls a function for each elment in the array.
+            - we can get element, index and array all at once.
+
+        - Conditional (ternary) orperator
+            - The conditional operator is the only JavaScript operator that takes three operands.
+            - shorter version of if else.
+            - syntax :- variablename = (condition) ? value1 : value2.
+                            ☝️              ☝️          ☝️       ☝️
+            - meaning :- var age      = (age > 18) ? if true : if false.
+
+14. Functions in JavaScript.
+    - properties->
+        - Function Definiton
+            - A JavaScript Function is a block of code designed to perform a particular task.
+            - A Function Definiton (also called a Function declaration), 
+            consists of the function keyword, followed by:
+                -> The Name of the function.
+                -> A list of Parameters to the function.
+                -> JavaScript statement enclosed in curly brackets.
+            - e.g -> function function Name (paramenters){
+                //statement
+            }
+            - Function name can be used as a variable but it is not recommended to do.
+        - Calling a Function
+            - Defining/Declaring a function does not execute it.
+            - A JavaScript function is executed when it is called.
+        - Function Parameters
+            - Names listed in function definition.
+            - e.g -> function functionName(parameter1, parameter2){};
+        - Function Arguments
+            - Are the real values passed to the function.
+            - e.g -> functionName(argument1, argument2);
+        - Function Expressions
+            - Means create a function and put it into the variable.
+            - Meaning : var funExp = functionName(arguments);
+            - e.g -> var total = sum(5,10); - now the function is assigned to a variable 'total'.
+        - Return Keyword
+            - When JavaScript reaches a return statement, the function will stop executing.
+            - The return value is returned back to the caller.
+        - Anonymous Function
+            - A function with no name.
+            - e.g -> const user = function(){};
+            - ......................☝️ It is Anonymous Function.
+            📝NOTE: ☝️ the whole part is called Anonymous function expression.
+
+15. ECMAScript 2015 (ES6) Part1
+    - properites ->
+        - 1996 - JavaScript was created.
+        - 1997 - ECMAScript was created.
+        - JavaScript was submitted / patent under ECMA international .
+        - every year new features come to Ecmascript.
+        - ECMAScript2015 is the most popular one.
+
+    - Features of ES6 ->
+        - let and const
+        - Template Literals
+            - `` for string
+            - ${} for vars function etc.
+        - Default Parameters
+            - If no argument is passed to the paramenters of the function then, the parameter can be assigned a default argument.
+            - e.g -> function sum (a,b= 5){}; sum(5);
+                    - b is default to 5 and a will aquire the argument passed to the function. 
+
+        - FatArrow function
+            - const user = () => {}
+            - ☝️ It is fat arrow function.
+            - 📝NOTE: fat arrow function need to be defined first before calling unlike the traditional function which can be defined after calling 😊.
+            - 🤯 If there is only one line of code returning a value then there is no need to add curly braces and write return keyword.
+            📝NOTE: FatArrow function does not support 'this' keyword.
+
+        - There's more in Part 2.😊
+
+16. Arrays in JavaScript
+    => What is an Array?
+        - When we use a var we only store one value at a time.
+        - We can't do var friends = 'ramesh', 'suresh', 'nitin' , 'mukesh';
+        - So to solve this problem we have Array class.
+        - var friends = ['ramesh', 'suresh', 'nitin', 'mukesh'];
+            - friends has now become an array.
+
+        📝NOTE: A simple definiton: If you want to store multiple data in a single variable then we use arrays.
+
+    => properites ->
+        - data entered in array are called elements.
+        -> Terms in Arrays
+            - 1st element -> lower Index/Lower Boundary.
+            - last element -> Upper Index/Upper Boundary. 
+            - The elements in an array are represented by index number
+            starting with 0.
+            - e.g-> var Names = ['vinod', 'bahadur', 'thapa' , 'ramesh'];
+            - index no of vinod : 0,
+            - index no of bahadur : 1,
+            - index no of thapa : 3,
+
+        -> Transversal of an Array.
+            - navigate through an array.
+            - if you want to get single data at a time and also change the data this method gets used =
+                - get data -> friends[1]
+                - change data -> friends[1] = something;
+            - .length property can be used to get the number of elements in an array .
+            📝NOTE: .length counting starts from 1. therefore it is important to add -1 to get the last element of array.
+
+        📝NOTE: () <- is method , .length <- property.
+
+        -> Searching and Filter in an Array.
+            - How to search some products on sites like amazon , flipkar?. Also you want' to use filter products, How to do it??->
+            - methods for this work ->
+                - indexOf() (returns the first least index of an element ..).
+                - lastIndexOf().
+                - includes().
+        -> How to Sort and Compare an Array.
+                - find().
+                - findIndexOf().
+
+        -> How to insert, Add, Replace and Delete Elements in Array(CRUD).
+            - push().
+            - unshift().
+            - pop().
+            - shift().
+            - splice([indexno],[howmany],[elements to be added]); - all in one method.
+                ☝️📝Note: if you use infinity in howmany it will choose all the elements after the provided index no .
+
+        -> Map(), Reduce(), Filter().
+            - map() (returns a new array with the desired data, and not touching the original array);
+            
+            - reduce() (Used to flatten an array means to convert the 3d or 2d array into a single dimensional array).
+            - used to get a single data/element from array.
+
+            - reduce method executes a reducer function.
+            - reducer function takes 4 arguments.
+                - Accumulator
+                - Current value
+                - Current Index
+                - Source Array
+
+            - filter() ().
+
+            - concat()
+            - The concat() method joins two or more strings.
+
+
+18. Strings in JavaScript
+- A JavaScript string is zero or more characters written inside quotes.
+- Used for storing and manipulating text.
+- Can use single or double quotes.
+- Strings can be primitives, from string literals.
+- Strings can be created as primitives.
+- Strings can be objects using the String() constructor.
+    -> properties ->
+        - .length property of string 
+            - return the length of string object.
+        - Escape Character
+            - when we need to use double / single quote inside quotes then we use backslash escape character.
+            - e.g -> 'how he is \'yash'\ ';
+            - we can also use alternate quotes to avoid this error.
+
+        - Finding a String in a String.
+            - indexOf().
+                - Just Note that every letter and space gets its own index no.
+            - lastIndexOf().
+                - starts backwards.
+            
+        - Searching for a string
+            - search() method is used for this purpose.
+            - difference b/w search and indexOf() is that search doesn't take a starting index no as a second parameter like indexOf() or lastIndexOf().
+
+        - Extracting string parts
+            - slice().
+                - extracts a part of a string and returns the extracted part in a new string.
+                - takes two parameters = start position, end position.
+                - 📝NOTE: it does not include the end position.
+                - Original array will not change.
+            - substring().
+                - similar to slice().
+                - cannot accept negative indexes.
+            - substr().
+                - similar to slice().
+                - difference is that the second paramenter specifies the length of the extracted part.
+                - adding minus sign will start extracting form backward.
+
+        - Replacing String content
+            - .replace
+                - replaces specified value with another value.
+                - takes parameters (searchFor, replaceWith);
+
+
+        - Extracting string characters
+            - charAt(position)
+                - returns the character at specified index position.
+            - charCodeAt(position)
+                - returns unicode at specified index positon.
+            - Property access [ ]
+                - 
+
+        - other useful methods
+            - toUpperCase().
+                - converts strings to uppercase.
+            - toLowerCase().
+                - converts strings to lowecase.
+            - concat().
+                - substitute to '+' .
+            - trim().
+                - removes whitespace.
+            - split()
+                - converts string to array.
+                - gives freedom to seperate elements by (comma, space, bar).
+
+19. Data & Time in JavaScript
+    - properties ->
+        => Date Methods (get and set).
+            - JavaScript Date objects represent a single moment in time in a platform independent format.
+            - Date objects contains a number that represents milliseconds since 1 January 1970 UTC.
+            - 📝NOTE:  Date objects are created with new Date() constructor.
+
+            - Four Ways to create new Date ->
+                -> new Date()
+                    - can be modified using 👉 toLocalString(), toString(), Date.now() methods.
+
+                -> new Date(year, months, day, hours, minutes, seconds, milliseconds).
+                    - Only ☝️ max 7 values are allowed.
+                    - 📝NOTE: months is given by number 0 to 11.
+
+                -> new Date(milliseconds).
+                    - Date.now() gives milliseconds since 1 jan 1970.
+
+                -> new Date(date string).
+                    - creates a new date object from a date string.
+
+                -> Some useful date methods() 
+                    - toLocalString().
+                    - getFullYear().
+                    - getMonth().
+                    - getDate().
+                    - getDay().
+
+                -> setter (set) methods
+                    - setFullYear().
+                    - setMonth().
+                    - setDate().
+                    - setDay().
+
+        => Time Methods (get and set).
+        - same as date but use seperate methods for this one 
+        - e.g -> new Date().getTime().
+        - e.g -> new Date().getHours(). 
+        -> getter (get) Methods 
+            - getTime().
+            - getHours().
+            - getMinutes().
+            - getSeconds().
+            - getMilliseconds().
+
+        -> setter (set) Methods.
+            - setTime().
+            - setHours().
+            - setMinutes().
+            - setSeconds().
+            - setMilliseconds().
+
+        => More methods
+            - toLocalTimeString().
+                - gets time only.
+            - toLocalDateString().
+                - gets date only.
+            - toLocalString().
+                - gets date and time both.
+        
+
+20. Math objects in JavaScript
+    - The JavaScript Math Object allows you to perform mathematical tasks on numbers.
+
+    - properites ->
+        - Math.PI 
+        - Math.round()
+            - rounds off the decimal part.
+            - if decimal >= 5 => +1.
+            - if decimal < 5 => removes decimal.
+        - Math.pow()
+            - raised to power.
+        - Math.sqrt()
+            - square root.
+        - Math.abs()
+            - converts negative into positive.
+        - Math.ceil() 
+            - returns the next value(+1).
+            - or largest nearest integer.
+        - Math.floor()
+            - eliminates the decimal.
+        - Math.min()    - min value.
+        - Math.max()    - max value.
+        - Math.random()
+            - returns a random number between 0 and 1.
+            - we can multiply it by any number to get numbers b/w 0 and the multiplied number.
+            - Math.floor() can be used to eliminate the decimal part and get only integers.
+
+21. Dom In JavaScript
+    - properites ->
+        - Windows vs Document.
+            -> Window :
+                - Window is the main container or the global Object.
+                - everyting we see on the browser is the windows object.
+                - titlebar, tabs,... and webpage collectively is the window object.
+                - 👉 all the members like (objects, methods or properties), if they are part of windows object then we do not need to refer them .
+                    - e.g -> we never write Window.setTimeOut(), or Window.getTime() , Window.alert() , as window is global object and automatically gets assigned .
+                -> 🧐Methods & properties
+                    - innerWidth property.
+                        - shows the width of the window.
+                    - innerHeight property.
+                        - shows the height of the window.  
+                    - history.back()
+                        - shows the previously visited website.
+                    - alert/confirm/prompt are also part of BOM.
+                    - location.href
+
+            -> Document :
+                - whereas the DOM is the child of the windows object.
+                - the website is the document object (DOM).
+                - from above explanation it is clear that document (DOM) is just a child or part of the window object.
+                - 📝NOTE: this means that everyting of document object gets passed to the windows object.
+                - 📝NOTE: but the vice versa is not true, we cannot access window objects in document object.
+                - 👉 Whereas in DOM we need to refer them , if we want to use the document object, methods, or properites.
+                - document is just like other objects of global object(window) like screen object e.t.c .
+
+        - DOM vs BOM.
+            -> DOM (document object model): 
+                - anything to play with document use DOM.
+                - like html css source files.
+            -> BOM (browser object model) : 
+                - BOM and windows both are its just the name of objects in window object.
+                - Anything to play with browser component use BOM .
+                - like history, location, navigation, screen as well as others.
+
+        - DOM Navigation.
+            - Sometimes we need to make some changes in the html using JavaScript, how we do it?, yes using DOM (document object model).
+
+            - document
+            - document.head
+            - document.body
+            - document.body.childNodes
+            - hasChildNodes()
+                - checks if the elements has child nodes.
+            - children
+                - firstChild 
+                    - gives the first child 
+                    - 📝NOTE: child properties just give what is in the tag , it may be a space or a tab and child properties give them as text.
+
+                - firstElementChild
+                    - this property properly gives the very first 'element child' no whitespace or tabs is considered.
+                    - it can be used twice in order to give the first child of the first child.
+
+            -📝NOTE:- The above ☝️ way was just one of the way of getting elements and is not recommended to do an easier approach is in the searching and getting elements part 👇.
+
+            - parent - parentNode, parentElement.
+            - sibling - previousSibling, previousElementSibling, nextSibling, nextElementSibling.
+            
+        - Searching and getting Elements reference.
+            - now we can use our DOM methods to get elements from html.
+            - getElementById().
+            - getElementsByClassName().
+            - getElementsByName().
+                - uses the name attribute in input tag.
+            - getElementsByTagName().
+            - querySelector().
+            - querySelectorAll().
+
+            📝NOTE:- what is the difference b/w querySelector and getElementById = getElementById can only select ids but sometimes we use class instead of an id to keep the code uniform in this case querySelector helps to choose classes and ids both.
+
+22. Events in JavaScript
+- HTML events are 'things' that happen to HTML elements.
+- When JavaScript is used in HTML pages , JavaScript can 'react' on these events.
+- JavaScript lets you execute coden when events are detected.
+    => properties ->
+        - 4 ways of writing Events.
+            - using alert();
+            - By calling a function(common way of writing).
+            - using Inline events(HTML onclicks = ** property and element.onclick)
+            - using Event Listeners(addEventListener and is very popular).
+        - what is 'Event object'?.
+            - 'Event object' is the parent object of the 'event object'.
+            - 🧐 Notice the Event(capital) and event(small).
+            - for Example - mouseEvents, focusEvents, keyboardEvents etc.
+        - mouseEvents in JavaScript.
+            - Events related to your Mouse.
+            - Events that occur when the mouse interacts with the HTML documents, belongs to the MouseEvent Object.
+            - mousedown
+            - mouseup
+            - mouseneter
+            - mouseleave
+            
+        - keyboardEvents in JavaScript.
+            - Events related to keys on the keyboard.
+            - Events that occur when user presses a key on the Keyboard,
+            belongs to the KeyboardEvent Objects.
+            - keypress - pressed any key.
+            - keydown - key goes down.
+            - keyup - key goes up.
+
+        - inputEvents in JavaScript.
+            - used for inputs in forms.
+            - how to get what user has typed in the input field or have selected(radio, checkbox etc)?
+            - for this we use onchange event
+            - use.value property for gettings what is written in input field.
+            - onchange.
+
+        📝NOTE : difference b/w on click and addEventListener is that addEventListener can be used multiple times while on click will allow only one event.
+
+23. Timing based events in JS
+- the window object allows execution of code at specified time intervals.
+- these time intervals are called timing events.
+    => properties ->
+        - setTimeout().
+            - executes a function after waiting for a specified number of milliseconds.
+            - takes two paraments = a callback function , time to execute code.
+        - setinterval().
+            - same as setTimeOut() but repeats the execution of the function continuously.
+        - clearTimeout().
+            - stop the fired event fired by the set timeout.
+        - clearinterval().
+            - stop the fired event fired by the set interval.
+
+24. OOPS(object oriented programming in JS).
+    - properties ->
+        - What is Object Literals?
+            - Object Literals is simply a key:value pair data structure.
+            - Storing variables and functions together in one container, we can refer this as an Objects.
+            - 🔔 Object is like you school bag, you can add all your data / items in one.
+            - 🔔 we can add multiple data in an array , but it is advised to add same type of data in array, So if you want to add a variety of data , we use Object.
+            - e.g-> Storing variables and functions together in one container.
+
+        - How to create an Object?
+            - 1st way
+                - let bioData = {
+                    myName : 'thapatechnical',
+                    myAge : 26,
+                    getData : function(){}
+                }
+
+            - 2nd way
+                - let bioData ={
+                    myName : 'vinod',
+                    myAge : 30 ,
+                    getData : (){}
+                    ☝️ No need to write 'function'.
+                }
+            🔔Points to Note:
+                1. If we add square brackets '[]' it becomes an array, and If we add curly braces '{}' it becomes an object.
+                2. the data is in the form of key:value pair , that is the part before quolon ':' is called key and after colon is called value.
+                3. data are seperated by comma (,).
+                4. you can add functions also as shown in dummy code.
+                5. 😎 functions in objects are called as methods.
+
+        - How to add object inside an object?
+            - using another pair of {} 
+
+        - What is 'this' objects?
+            - 'this' object contain the current context.
+            - it can have different values depending on where it it placed.
+            - Inside a function 'this' refers to the global object.
+            - Inside a function method of an object 'this' refers to the object scope.
+            - 📝NOTE :- 'this' doesn't work with fat arrow function method inside an object.
+
+
+25. ECMAScript 2015 (ES6)
+
+25.1.1 Array Destructuring in ES6
+    - Arrays can be destructured and get elements from array becomes easier.
+    - e.g -> let destArr = ['elmentName', 'elementName', 'elementName' = 'element'];
+
+25.1.2 Object Destructuring in ES6
+    - same as arrays Destructuring just use curly braces instead of square brackets.
+
+25.2.1 Object Properties
+    - Dynamic Properties
+        - if we write a variable name in our object key's value the value gets the value of variable.
+        - e.g -> var x = 'c'; any object{myvar : x}; myvar gets value of variable x that is c.
+        - if we want a variable value in the key , then we need to use square brackets around it and it will take the value of variable as key.
+        - e.g -> var c = 'x'; any object{[c] : y}; the c key will become x.
+
+    - Spread Operator
+        - (...) + array name;
+
+26. ECMAScript 2016 (ES7)
+    - properites -> 
+        - .includes() 
+        - exponentian operator (**)
+
+27. ECMAScript 2017 (ES8)
+    - Async await - we will see later in advanced part.
+    - String.padding
+        - .padEnd().
+        - .padStart().
+        - Object.values.
+        - Object.entries.
+
+28. ECMAScript 2018 (ES9)
+    - Rest and spread properties.
+        - ES2018 allowed to use Rest and Spread properties in objects also.
+
+29. ECMAScript 2019 (ES20)
+    - stringify
+    - flat
+        - (2) - flattens two dimensional array (array in array).
+        - (3) - flattens three dimensional array (2 arrays in one array).
+        - (infinity) - flattens all dimensional array. (infinite array)
+
+    - flatMap
+    - Object.fromEntries
+        - if you want to convert arrays back to normal objects , we can use Object.fromEntries();
+
+30. ECMAScript 2020 (ES2021)
+    - Bigint datatype
+        - JavaScript cannot handle operation on numbers more than a specified limit.
+        - But to do the operation we can use Bigint datatype (n).
+        - Just add n at the end of a very big number.
+        - e.g -> 900717799743439793794300n + 12n;
+
+31. use strict; <- came in ES2014 (ES5).
+    - use the traditional way.
+    - not allows short way.
+    - or fat arrow function.
+
+32. Some Advanced JavaScript Concepts.
+    - properites ->
+        - Event Capturing
+            -> capture phase , bubble phase
+            -> to stop bubble phase -> event.stopPropagation().
+
+33. Function currying.
+    - properites ->
+        - returning function in function in function....
+        - const sum => (num1) => (num2) => (num3)
+        - ☝️ We dont need to write function and return statement if we are returning something using fat arraow function.

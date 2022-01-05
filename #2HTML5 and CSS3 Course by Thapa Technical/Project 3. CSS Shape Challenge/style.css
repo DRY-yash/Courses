@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	background-color: grey;
+	display: grid;
+	place-items: center;
+}
+
+.hexa {
+	width: 100px;
+	height: 58px;
+	/* height: 80px; */
+	/* height: 40px; */
+	background-color: white;
+	position: relative;
+}
+
+.hexa::before {
+	content: '';
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	transform: rotate(60deg);
+}
+
+.hexa::after {
+	content: '';
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: white;
+	transform: rotate(120deg);
+}

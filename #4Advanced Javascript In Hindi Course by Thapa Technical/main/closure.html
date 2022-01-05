@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        /*Closure in JavaScript*/
+        /*
+        1. closure is an action in which inner functions have access to the variables of it parent functions and also the global variables(lexical scoping) and Parameters(functions).
+        
+        2. A closure is a combination of a fucntion and lexical environment.
+        */
+
+        const outerFun = (a) => {
+            let b = 10;
+            const innerFun = () => {
+                console.log(a + b); //it can access variables and parameters of parent f();
+            }
+            innerFun(); //imp
+        }
+        outerFun(5);
+    </script>
+</body>
+
+</html>

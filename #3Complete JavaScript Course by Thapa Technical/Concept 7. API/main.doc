@@ -1,0 +1,14 @@
+1. What is API.
+- API is nothing but a stored data on a link that anyone can use to make websites or elements.
+- API is used to share data with other companies like how ticket sites know how many seats have been booked 🤔 , YES Through API they give money to share data b/w themselves.
+
+2. It works as promise SOOO -
+- You can use Async Await or then() and catch() with it 🧐.
+
+3. how to catch
+- when we have some error in getting the data related to code not the api then .catch() works as charm.
+- But when we have given wrong api link or the browser is unable to load the data then .catch() doesn't get executed for that error.
+
+4. Async Await is also acceptable.
+
+5. We can also use Async Await's try() , catch() method for better error handling.

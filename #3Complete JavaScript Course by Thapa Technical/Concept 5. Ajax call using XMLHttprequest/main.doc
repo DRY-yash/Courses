@@ -1,0 +1,9 @@
+1. What is AJAX ?
+
+- Asynchronous JavaScript And XML is a programming practice of building complex , dynamic webpages using a technology known as XMLHttpRequest.
+- AJAX is not a programming language.
+- AJAX just uses a combination of : A browser built-in XMLHttpRequest,JavaScript and HTML DOM.
+- AJAX allows web pages to be updated Asynchronously by exhanging data with the a web server behind the scenes.
+- Using it we dont need to refresh the whole page to get some data or see some data.
+- This means that it is possible to update parts of a web page , without reloading the whole page.
+- 

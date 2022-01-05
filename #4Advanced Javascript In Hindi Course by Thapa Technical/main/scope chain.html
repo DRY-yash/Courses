@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Chain</title>
+</head>
+
+<body>
+    <script>
+        /*Scope Chain*/
+        /*Scope Chain: is used to resolve the value of variable names in Javascript.*/
+        /*Inner function can access the variables of their parent functions and global variables but canno't access values of other functions declared beyond its scope(world);*/
+        /*NOTE- Parent functions cannot access the variables of its child functions.*/
+
+
+        /*Strict Mode*/
+        "use strict" /*helps the browser to quickly find mistakes and forces to use correct parameters */
+
+        /*This keyword in Javascript*/
+        /*If used inside an object : This refers to the owner object*/
+        /*If used inside an function : This refers to the global object*/
+
+        console.log(this); /*refers to window object/global object already created by browser before running script*/
+
+        function sum() {
+            console.log(this);
+        }
+        sum();
+/*Inside a function also "This" refers to the global object*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			//JavaScript Object 🧺
+			var jsonObject = {
+				FIFA: [
+					{
+						countryName: 'Brazil',
+						bestplayer: 'Neymar',
+					},
+					{
+						countryName: 'Argentina',
+						bestplayer: 'Messi',
+					},
+					{
+						countryName: 'India',
+						bestplayer: 'sunil chettri',
+					},
+				],
+			};
+
+			console.log(jsonObject);
+			console.log(jsonObject.FIFA[0]);
+			console.log(jsonObject.FIFA[0].bestplayer);
+			console.log(
+				`${jsonObject.FIFA[0].countryName}'s best player is ${jsonObject.FIFA[0].bestplayer}`
+			);
+			console.log(
+				`${jsonObject.FIFA[1].countryName}'s best player is ${jsonObject.FIFA[1].bestplayer}`
+			);
+			console.log(
+				`${jsonObject.FIFA[2].countryName}'s best player is ${jsonObject.FIFA[2].bestplayer}`
+			);
+
+			// Change to JSON Object. 🏀
+			var changeData = JSON.stringify(jsonObject);
+			console.log(changeData);
+			// Change to JavaScript Object. 🧺
+			var changeData_ = JSON.parse(changeData);
+			console.log(changeData_);
+		</script>
+	</body>
+</html>

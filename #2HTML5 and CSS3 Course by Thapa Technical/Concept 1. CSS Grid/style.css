@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	width: 90%;
+	margin: 50px auto;
+	border: 2px solid #000;
+	color: #fff;
+	text-shadow: 2px 2px black;
+	text-transform: uppercase;
+	text-align: center;
+	display: grid;
+	/* grid-template-rows: 100px 150px; */
+	/* grid-template-columns: 150px 100px 150px; */
+	/* grid-template-columns: 1fr 1fr 1fr; */
+	/* grid-template-rows: 150px 150px; */
+	grid-template-rows: repeat(2, 150px);
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+
+	/* grid-auto-rows */
+	grid-auto-rows: 150px;
+
+	/* grid align */
+    
+	/* align-items: center; */
+	/* justify-content: center; */
+	/* justify-items: center; */
+	/* justify-items: end; */
+}
+
+.div1 {
+	background-color: red;
+	/* span div 1 to div 4 */
+	grid-row: 1 / span 3;
+}
+.div2 {
+	background-color: orange;
+	/* We want div 2 to be at the position of div 5 */
+	grid-row-start: 2;
+	grid-row-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+.div3 {
+	background-color: green;
+}
+.div4 {
+	background-color: blue;
+}
+.div5 {
+	background-color: indigo;
+	/* we want div 5 to be at the position of div 2 */
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+.div6 {
+	background-color: violet;
+}

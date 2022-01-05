@@ -1,0 +1,115 @@
+
+1. What is HTML5?
+        HTML 5 is a markup language.
+        Developed by W3C(world wide web console) and WHATWG(web hypertext application application technology working group).
+
+2. Why HTML5?
+        - New Elements and attributes were introduced
+            eg:- Doctype has been simplified.
+            Characted encoding is also very simplified.
+        - All elements and attributes are supported in all web browsers.
+
+3. Changes HTML4 v/s HTML5
+    HTML4          /           HTML5
+    <acronym>                  <abbr>
+    <applet>                   <object>
+    <basefont>                 CSS
+    <font>                     CSS
+    <dir>                      <ul>
+    <center>                   CSS
+    <strike>                   CSS or <s> or <del>
+
+4. HTML 5 New Elements
+    tags ->
+        - <article> (defines an article).
+        - <aside> (defines content aside from the page content)
+        - <details> (dropdown type to see details of summary).
+        - <figure>/<figcaption> (add images and their captiion).
+        - <footer> (defines last section of website).
+        - <main> (defines main content of document).
+        - <nav> (use it to make navbar).
+        - <progress> (shows the progress).
+        - <section> (defines a new section).
+        - <wbr> (defines a particular place for word break if not enough space)
+
+    Note ->
+        - Elements and Tags are different.
+        - tags do not contain any content.
+        - tags with content are called elements.
+
+5. Semantic Elements
+    => Before HTML5 Semantic elements there were no tags with meaning we only had a div and then used an id or class to show what is being store in that tag.
+
+    => But after implementation of HTML5 we now have tags that self define themselves.
+
+    tags ->
+        - <header>
+        - <nav>
+        - <section>
+        - <article>
+        - <aside>
+        - <form>
+        - <footer>
+
+6. HTML5 Input Types
+    => Input types were introduced for the first time in HTML5 
+    => Before that there was only text input type.
+
+    types ->
+        - color
+        - date
+        - datetime
+        - datetime-local
+        - email
+        - month
+        - number
+        - range
+        - search
+        - tel
+        - time
+        - url
+        - week
+
+7. HTML Canvas
+    => What is HTML Canvas?
+        -The HTML <canvas> elemnt is used to draw graphics, on the fly, via JavaScript.
+        - The <canvas> element is only for graphics. You must use JavaScript to actually draw the graphics.
+
+    => Rectangle
+        - To create a rectange using HTML5 Canvas, we can use the rect()method.
+        - Canvas rectange is positioned with x and y parameters, and is sized with width and height parameters.
+
+8. HTML5 SVG
+    => what is SVG?
+        - SVG(scallable vector graphics).
+        - SVG is used to defined graphics for the Web.
+        - SVG is a W3C recommendation.
+
+    => Difference b/w Canvas and SVG?
+        - SVG is a vector , so it never gets pixelated.
+
+    properties ->
+        - <svg> tag will be used to make SVG graphics.
+        - some attributes cy, cx, r, etc.
+
+9. HTML Audio
+    properties ->
+        -<audio> tag specifies a standard way to embed audio in a web page.
+        - src is used to specify location.
+        - controls (acts like a remote to play).
+        - loop (loops play audio).
+        - autoplay (plays automatically while loading web page).
+        - mp3, ogg and wav can only be used for audio.
+
+10. HTML Video
+    properties ->
+        - <video> tag plays video and takes attributes same as audio.
+        - src is used to specify the location.
+        - same controls attribute.
+        - same loop attritube.
+        - same autoplay attribute.
+        - height & width can be given.
+        - volume
+        - fullscreen
+        - last but not the least only mp4, ogg, and webM video format can be used.
+        

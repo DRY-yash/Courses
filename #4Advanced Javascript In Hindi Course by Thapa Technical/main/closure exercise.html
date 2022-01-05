@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Exercise</title>
+</head>
+
+<body>
+    <script>
+        const interviewQ = (name) => {
+            return function (topic) {
+                if (name === `vinod`) {
+                    console.log(`hii, ${name}, plz explain what is ${topic}.`);
+                }
+                else if (name === `thapa`) {
+                    console.log(`hii, ${name}, plz explain what is ${topic}.`);
+                }
+                else if (name === `techincal`) {
+                    console.log(`hii, ${name}, plz explain what is ${topic}.`);
+                }
+                else {
+                    console.log(`Welcome to TT company`);
+                }
+            }
+        }
+
+        interviewQ(`vinod`)(`UI`);
+        interviewQ(`thapa`)(`UX`);
+
+        /*Difference b/w Higher Order Fucntion and Closure is that we used return inside multiple if statements.*/
+    </script>
+</body>
+
+</html>

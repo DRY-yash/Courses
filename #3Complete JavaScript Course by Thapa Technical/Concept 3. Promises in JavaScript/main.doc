@@ -1,0 +1,26 @@
+1. Promises : 
+    - To keep track of what you are doing.
+    - Keeps track of whether the event has happened already or not.
+    - Determines what will happen after the event has happened/executed.
+    - 🔔 Most Importantly we use it to eliminate the concept of callback hell 👿
+
+2. Promise Stages : 
+    -> Pending : 
+        - cant say until the event is about to happen.
+    -> resolve - fulfilled : 
+        - success in executing the event.
+    -> reject - not fulfilled :
+        - failed to execute the event.
+
+3. How to use Promise :
+    -> 1st way : Using Promises Constructor.
+        - new Promise();
+        - A function is executed by the Constructor, during Constructoing promiseObj.
+        - There are two parameters of callback function in promise => resolve , reject.
+        - When we use promise there are two conditons resolve() and reject(), if we get the condition fulfilled we use resolve function else use reject function.
+        - then() and catch() are the two methods used in promise.
+        - use then() when we pass resolve function to promise , whatever value is in the resolve function will be accessed by then method's parameter.
+
+        - catch() method is used to execute the reject function if resolve function() is not found.
+
+    -> 2nd way : Using Promises Object.

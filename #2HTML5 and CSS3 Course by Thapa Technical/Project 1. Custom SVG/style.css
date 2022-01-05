@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+	overflow: hidden;
+    transform: translateY(-4rem
+    );
+}
+.mainDiv {
+
+	text-align: center;
+	background-color: #26de81;
+}
+
+.mainDiv h1 {
+	font-size: 5rem;
+	text-transform: uppercase;
+}
+
+.mainDiv p {
+	font-weight: bold;
+	padding: 20px;
+}
+
+.upper-svg {
+	background-color: #26de81;
+}
+
+.svg-2 {
+	background-color: #26de81;
+}

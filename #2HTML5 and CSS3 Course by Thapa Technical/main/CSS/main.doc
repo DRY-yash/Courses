@@ -1,0 +1,102 @@
+1. CSS3
+    - is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.
+    - it brings a lot new properties and attributes.
+    - ex:- shadows, text effects, transition, flexbox, grid etc.
+
+2. CSS2             /           CSS3
+CSS Id and Class,   Text effects,
+Fonts,              Font,
+Text,               Animation,
+Borders,            Transition,
+Scrollbars,         Multiple Column Layout(grid)
+Positioning,        Background,
+Z-index,            Borders,
+List,               User Interface - box-sizing, resize,
+Display,            2d/3d Transformations
+Float,              Linear gradient
+Cursors,            Flexbox
+
+☝️We will see the CSS3 part which has been added.
+
+📝NOTE  : Id and Class are called selectors.
+        : Syntax : horizontal offset(left -> right) => vertical offset(top =>   bottom) => blur => spread => color 
+
+3. Text Effects in CSS3 (adds some extra features to texts)
+        properties ->
+            - text-shadow (shadow around text).
+            - word-wrap (break the text in another line).
+
+4. Fonts in CSS3
+    properties ->
+        - font-family (downloaded fonts can now be added by placing it in the folder of the project).
+        - only ttf (true type font) & otf (open type font) is allowed.
+
+5. Animation in CSS3
+    properties ->
+        - name (name of animation must be there).
+        - duration (duration of animation must be there).
+        - keyframes (
+            way1: 0% - 100%
+            way2: from - to
+        ).
+
+6. Transition Effects in CSS3
+    properties ->
+        - property ().
+        - duration ().
+        - timing ().
+        - delays ().
+
+7. Multiple Columns in CSS3
+    properties ->
+        - column-count ().
+        - column-rule ().
+        - column-gap ().
+
+8. Backgrounds in CSS3
+    properties ->
+        - background-origin ().
+        - background-origin: border-box (The background image starts from the upper left corner of the border).
+
+        - background-origin: content-box (The background image starts from the upper left corner of the content).
+
+        - background-origin: padding-box (The background image starts from the upper left corner of the padding edge).
+
+        - background-origin: initial (inherit from parent).
+
+9. Borders in CSS3  (a property of CSS3)
+    properties ->
+        border-radius (rounded corners).
+        box-shadow (shadow of box).
+    NOTE: direction - horizontal offset -> vertical offset -> blur -> spread -> color.
+
+10. User Interface in CSS3
+    properties ->
+        => resize (if / how element is resizable by the user).
+            - vertical (resize vertically).
+            - horizontal (resize horizontally).
+            - both (self explanatory).
+            - none (not resizable).
+
+        => box-sizing (while adding padding and margin , it does not affect the width and height of the container element).
+
+        => outline-offset().
+
+11. 2d 3d Transformations in CSS3.
+    properties ->
+        - translate() (element moves from its current position).
+        - rotate() (rotates clockwise at a given degree).
+        - scale() (increases or decreases size).
+        - skew() (the element turns in a given angle).
+        - matrix() (contains all fo the 2D Transform methods into one).
+
+12. CSS Gradient(a method of background-image).
+    properties ->
+        - to right (left to right gradent).
+        - to left (right to left).
+
+13. Flexbox 
+    properties ->
+        - if there are multiple divs in one div.
+        - used to show multiple columns.
+        - to show rows grid is more recommended.

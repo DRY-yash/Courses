@@ -1,0 +1,122 @@
+1. CSS Stands for Cascading style Sheet.
+
+2. CSS is used to control the style of a web document in a simple and easy way.
+
+3. CSS is created and maintained through a group of people within the W3C called the CSS Working Group.
+
+4. Three wasy of inserting a style sheet.
+    *External
+    *Internal
+    *Inline
+
+5. CSS ID and Class
+    -The class selector is used to specity a style for a group of elements.
+    -The id selector is used to specify a style for a single, unique element.
+
+6. CSS Bacground Property
+    CSS color specify =>
+        - a valid color name - like "red".
+        - a hex value like "#fff".
+        - an RGB value like rgb(0,0,0);
+        - an HSL (adanced);
+
+    Background Image =>
+        properties -> background-repeat (repeat-y, repeat-x, no-repeat).
+                   -> background-size (cover, 100% 100%, contain).
+                   -> background-attachment (scroll, fixed, local, initial, inherit).
+
+7. CSS Fonts
+    properties ->
+        - font-family ("Arial, cursive";).
+        - font-variant (small-caps).
+        - font-size (16px, 2em).
+        - font-weight (200, 300, bold , normal). *note - (min) 100 - 900 (max)
+        -font-style (italic, oblique, normal).
+
+8. Text Css 
+    properties ->
+        - color (same as default colors).
+        - letter-spacing (b/w letters , 2px , 3px, 5px ).
+        - word-spacing (b/w word , 2px , 3px, 5px ).
+        - direction {
+            ltr(left-to-right).
+            rtl(right-to-left).
+        }
+        -text-indent (10px).
+        -text-align (left, center, right, justify ).
+        -text-transform (uppercase, lowercase, capitalize).
+
+9. Link CSS
+    properties ->
+        - a:link (unvisited).
+        - a:visited (visited). (clicked full).
+        - a:hover (hover over it).
+        - a:active (clicked down on it).
+
+10. Border CSS
+    properties ->
+        - border-color (same as color).
+        - border-style (dashed, solid, none, dotted, double, groove, ridge, inset, outset ).
+        - border-width (2px, 3px ,5px ).
+        - border-radius (10%, 50%, 2px, 15px).
+            
+11. List CSS
+    properties ->
+        - list-style-type (disc, circle, square, none, upper-roman[I, II, III, IV], lower-roman[i, ii, iii, iv], lower-alpha[a, b, c, d], upper-alpha[A, B, C, D] ).
+
+12. Box Model CSS
+    properties ->
+        - Content (the element itself).
+        - Padding (b/w content and border).
+        - Border (b/w padding and margin).
+        - Margin (after border).
+
+12.5 NOTE: To use the shorthand property - the directions to use are as follows - Top -> Right -> Bottom -> Left.
+
+13. CSS Scrollbars
+    Overflow => types (overflow-x, overflow-y)
+        properties ->
+            -visible (shows the content as it is , no-scroll).
+            -hidden (hides the extra content).
+            -scroll (fits with scrollbar).
+            -auto (automatically).
+
+14. Position CSS
+    relative =>
+        properties -> 
+            - assigns the position of child elements.
+    absolute =>
+        properties ->
+            - gets positioned to any relative position.
+
+14.4 NOTE: every div positions itself vertically taking all of the space ⬇️ .
+
+15. Z-index
+    properties->
+        - the more z-index , the more image comes to top.
+
+16. CSS Float
+    properties ->
+        - float-left(starts the element from left).
+        - float-right (starts the element from right).
+
+17. CSS Display
+    properties -> (in CSS)(flex and grid are in CSS3)
+        - Inline
+        - Block
+        - Inline block
+        - None
+        - grid(CSS3)
+        - flex(CSS3)
+
+18. Cursors
+    properties ->
+        - pointer
+        - default
+        - help
+        - wait
+        - move
+        - crosshair
+        - text
+        - resize(n, e, s, w, ne,nw, se, sw, )
+            north, east, south, west, northeast, northwest ... so on.

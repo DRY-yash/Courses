@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+
+<body>
+    <script>
+        /*Callback Function*/
+        /* 1. Any function that is passed as an argument is called a callback function.*/  //See Above Point no 03
+        /* 2. A callback is a function that is to be executed after another function has finished executing -- hence the name 'call back'.*/
+        const funA = () => {
+            setTimeout(function () {
+                console.log(`welcome FunA`);
+            }, 3000);
+        }
+
+        const funB = () => {
+            console.log(`Welcome FunB`);
+        }
+
+        // funA();  //funA get called after funB
+        // funB();  //funB get called before funA
+
+        //you can clearly see funB shows first then funA , So to avoid these circumtances we use a callback function, which doesn't allow a function to execute before a particular function is finished executing.
+
+        // Callback function example
+        const perOne = (friend, callfrnd) => {
+            console.log(`I am busy right now. I am talking to ${friend}. I will call you back.`);
+            callfrnd(); //imp
+        }
+
+        const perTwo = () => {
+            console.log(`Hey what's up. I call back you dekha.`);
+        }
+
+        perOne("Thapa", perTwo);  //this is an example of callback function(calling a function as an argument of another function.);
+    </script>
+</body>
+
+</html>

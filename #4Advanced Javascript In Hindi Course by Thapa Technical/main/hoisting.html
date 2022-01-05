@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+
+<body>
+    <script>
+        /* Hoisting*/
+        /*Calling the function and variable before they are declared is called Hoisting*/
+
+        /*Hoisting in functions*/
+        sum(5, 5); //function called (1)
+        function sum(a, b) { //function declared (2)
+            var add = a + b;
+            console.log(add);
+        }
+        /*But javascript engine first see the function declared and then see the function called
+        This is Hoisting !*/
+
+        //Exception
+        /*Exception function expression (the function which is written using a variable) will not be able to Hoisting*/
+        // diff(10, 5);
+        var diff = function (a, b) {
+            var add = a - b;
+            console.log(add);
+        }
+        /*the above part throws an error but if we call the diff function after declaration it will work as normal.*/
+        // diff(10,5); //<== if we declare it here.
+
+        //Hoisting in Variable
+        console.log(n);
+        var n = 10;
+
+        /* In the above expression the value of 'n' will not be 10, due to hosting */
+
+        var n = undefined;
+        console.log(n);
+        n = 10;
+
+        /*the above is what happens in the browser engine due to hoisting , variable declarations move to top and have a default value set to undefined and rest are left at their place which does this error*/
+
+        /*So to avoid this , we can do ===>*/
+        var n;
+        n = 10;
+        console.log(n);
+
+        /*We can assign a value to a variable before it is called (Console.log , e.t.c). */
+
+        //Exception
+        /*const and let will throw error if they are not initialised before calling*/
+
+        let c = 7;
+        console.log(c);
+// let c = 7;
+
+        /* so to avoid this assign value before calling see line 45 here */
+    </script>
+</body>
+
+</html>

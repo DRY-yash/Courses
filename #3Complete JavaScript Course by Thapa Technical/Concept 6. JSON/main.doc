@@ -1,0 +1,34 @@
+1. What is JSON?
+- JSON stands for JavaScript Object Notation.
+- JSON is a format for storing and transporting data.
+- JSON is often used when data is sent from a server to a web page.
+- JSON is a lightweight data interchange format.
+- 🧐 Previously we used XML for this purpose but now we use JSON as it is very fast and lightweight.
+
+1.1 why it is used for ?
+- It is a data format that can communicate through multiple programming languages and transfer it.
+- like it can be used to transfer data between frontend like JavaScript to backend like php.
+- When accessing JSON Ajax is very important.
+
+2. JSON Data Types
+- string
+- Number
+- Object
+- Array
+- Boolean
+- Null
+
+- Cant use -> function , date and undefined as JSON value.
+
+3. JSON Syntax Rules
+- Data is in key value pair(as it is an JS Object 😀).
+- Curly braces hold objects.
+- Square brackets hold arrays.
+- keys and value pair must be in double quotes("").
+☝️ And this is the basic difference between JSON and a nomral JS object, that JSON accepts all data as string so we need to use double quotes in both key and value pair names.
+
+4. JSON.stringify(); 
+- converts JavaScript object into JSON object.
+
+5. JSON.parse();
+- converts JSON Object into JS Object.

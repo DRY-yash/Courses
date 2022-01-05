@@ -1,0 +1,65 @@
+    CSS Grid Layout Module
+
+1. Css grid layout module offers a grid based layout system with rows and columns making it easier to desing web pages without using float and positioning.
+
+2. CSS Grid
+    properties ->
+        - grid-template-rows(defines number & width of rows).
+            ex:- grid-template-rows(150px 150px);
+                ☝️here two rows each of 150px will be created.
+
+        - grid-template-columns(defines number & width of columns).
+            ex:- grid-template-columns(150px 150px 150px);
+                ☝️here three columns each of 150px will be created.
+
+        - fr(fractional unit) is recommended to use with grids
+            ex:- grid-template-rows(1fr 1fr);
+                ☝️here 2 rows each of 1fraction of total space.
+
+
+        - gap(gap b/w grids)
+            => grid-row-gap
+            => grid-column-gap
+            => gap is the shorthand property to use row and column gap.
+
+        - repeat( the shorthand property to make columns and rows of same width).
+            ex:- grid-template-rows: repeat(2, 1fr);
+
+        - grid-row-start(changes the row start with the entered number).
+        - grid-row-end(changes the row end with the entered number).
+        - grid-column-start(same).
+        - grid-column-end(same).
+            ☝️Short hand properties of the above four are grid-row and grid-column. Just seperate start & end with '/'.
+                - ex:- grid-column: 2/4.
+                - ex:- grid-row: 1/2.
+
+        -span (takes space of other columns or rows) 
+            -1 can be used to span it fully across row or column .
+
+3. explicit grid and implicit grid  (the grids that are defined to take space of other are called explicit grid, and those grids that were forced to move to another row or column are called as implicit grid).
+
+    => At this point we just created 2 rows but due to our grid row property (grid-row) 3 rows have been created.
+
+    => So to fix this we use a property grid-auto-rows;
+        - properties ->
+            - automatically created new rows of defined lenght if created after the whole process.
+            ex:- grid-auto-rows: 150px;
+
+4. grid-align-items(used to align a particular item)
+    properties ->
+        - align-items:;
+        - justify-content:;
+        - justify-items:;
+
+5. min-content & max-content(used to provide the minimun and maximum length of items in grid according to the content present in the grid item).
+    - properties ->
+        - min-content;
+        - max-content;
+        - minmax()
+            = minimum value and maximum value.
+                ex:- minmax(150px, 200px)
+
+6. Responsive Layout 
+    - properties ->
+        - auto-fit (automatically fits content according to the given space)
+        - ex:- repeat(auto-fit, minmax(150, 250px));

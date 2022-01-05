@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassbyValue</title>
+</head>
+
+<body>
+    <script>
+        /*Pass by value v/s Pass by reference.*/
+        //Pass by Value.
+        let a = 5;
+        let b = a;
+
+        console.log(a); //a is 5
+        console.log(b); // b is also 5
+        //After copying of value both variables a and b both become independent, and don't affect the other after this.
+
+        //Pass by reference
+        const obj1 = {
+            user: "thapa",
+            pass: "password"
+        }
+
+        const obj2 = obj1;
+
+        console.log(obj1); //obj1 value is same as assigned.
+        console.log(obj2); //obj2 value is same as obj1.
+
+        //
+
+        //What is the diff?
+        b = a + 5; //this is pass by value , after changing b a doesn't change.
+        console.log(a); //a is still 5.
+        console.log(b); //b has new value 10.
+        obj2.pass = "vinod"; //this is pass by reference , after changing obj2 pass property the obj1 also changer.
+        console.log(obj1); //obj1 value gets changed to obj2 .
+        console.log(obj2); //obj2 has new value.
+
+//NOTE - [].concat() can be used to avoid referencing in arrays.
+    </script>
+</body>
+
+</html>

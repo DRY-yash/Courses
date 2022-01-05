@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Complete JavaScript in Hindi</title>
+	</head>
+	<body>
+		<div class="mainDiv">
+			<h1 id="title">Complete JavaScript in one video</h1>
+			<h2 class="className">Find using class name</h2>
+			<h3>No class or Id element</h3>
+			<form action="">
+				<input type="radio" name="gender" />Male
+				<input type="radio" name="gender" />Female
+			</form>
+			<p class="para">lorem</p>
+			<p class="para">lorem</p>
+		</div>
+		<br />
+		<hr />
+		<div class="events">
+			<a href="#" onclick="alert('I am awesome but no one use me')"
+				>simple inline alert()</a
+			>
+			<br />
+			<a href="#" onclick="callingFunction()">By calling a function</a>
+			<br />
+			<a href="#" id="internalEvent">By internal event</a>
+			<br />
+			<a href="#" id="eventListener">By Event Listener property</a>
+			<hr />
+			<div class="mouseEvents">
+				<p id="myp" onmousedown="mouseDown()" onmouseup="mouseUp()">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+					autem! Aut inventore eveniet doloremque saepe error, sit porro ratione
+					molestiae non earum placeat alias, rem doloribus quae ad est
+					distinctio?
+				</p>
+				<br />
+				<p id="useEventList">Using Mouse Event listeners.</p>
+			</div>
+			<hr />
+			<div class="keyboardEvents">
+				Keyboard events
+				<input
+					type="text"
+					id="inputKeyboard"
+					onkeypress="keyPress()"
+					onkeydown="keyDown()"
+					onkeyup="keyUp()"
+				/>
+				<p id="displayKey"></p>
+			</div>
+			<hr />
+			<div class="inputEvent">
+				<label for="">Your Name 👉</label>
+				<input type="text" id="inc" />
+
+				<select name="iceCreams" id="iceCreams" onchange="selectElement()">
+					<option value="">Select One</option>
+					<option value="chocolate">Chocolate</option>
+					<option value="vanilla">Vanilla</option>
+					<option value="strawberry">Strawberry</option>
+				</select>
+			</div>
+			<hr />
+			<div class="timeEvents">
+				<div id="setTimeout">
+					<p>Want to know my name</p>
+					<p id="showMyName"></p>
+					<br />
+					<button id="btn">Click here</button>
+				</div>
+
+				<div class="clearTimeout">
+					<p>Click the start button to give alert</p>
+					<p>Click the stop button to stop it</p>
+					<button id="startP">Start</button>
+					<button id="stopP">Stop</button>
+				</div>
+
+				<div class="setInterval">
+					<p id="intervalPara">can you stop me when I reach at 5 ?</p>
+					<br />
+					<button id="btnNew">Click here</button>
+					<button id="btnToStop">Stop it!</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="main.js"></script>
+</html>

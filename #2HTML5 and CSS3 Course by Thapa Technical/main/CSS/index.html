@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>CSS3</title>
+	</head>
+	<style>
+		* {
+			font-family: kuchbhi;
+		}
+		#text-effect {
+			text-shadow: 2px 4px 5px blue;
+		}
+		#word-wrap {
+			border: 2px solid #000;
+			width: 300px;
+			word-wrap: break-word;
+		}
+		@font-face {
+			font-family: kuchbhi;
+			src: url('go3v2.ttf');
+		}
+		#font-family {
+			font-family: 'kuchbhi';
+		}
+		#batman {
+			position: relative;
+			width: 100%;
+			height: 100px;
+		}
+		#batman img {
+			width: 100px;
+			height: auto;
+			position: absolute;
+			left: 0;
+			animation: batman 6s linear infinite;
+		}
+
+		#pokimane-div {
+			width: 100%;
+			height: 100%;
+		}
+
+		#pokimane-div img {
+			width: 50px;
+			height: auto;
+			transform: translateX(120px);
+			top: 50px;
+		}
+		@keyframes batman {
+			from {
+				left: 0;
+			}
+			to {
+				left: 75%;
+			}
+		}
+
+		#transition-heart {
+			width: 50px;
+			height: 50px;
+			/* transition-property: width, height; */
+			transition-property: transform;
+			transition-duration: 2s;
+			padding-left: 10px;
+		}
+
+		#transition-heart:hover {
+			/* 1st way */
+			/* width: 100px;
+			height: 100px; */
+
+			/* 2nd way */
+			/* writing scale means 2 x original width height */
+			transform: scale(2, 2);
+		}
+
+		.column-para {
+			column-count: 3;
+			column-gap: 50px;
+			text-align: justify;
+			column-rule: dashed 2px #333;
+		}
+		#mybg {
+			width: 300px;
+			height: 300px;
+			background-image: url('https://images.pexels.com/photos/1982852/pexels-photo-1982852.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#border {
+			margin: 20px;
+			border: 10px solid #000;
+			border-radius: 50px;
+			box-shadow: 4px 4px 5px 4px grey;
+			background-origin: content-box;
+		}
+		#resize {
+			border: 2px dashed #000;
+			width: 300px;
+			resize: both;
+			/* overflow is very important for resize */
+			overflow: auto;
+		}
+		#box-sizing {
+			box-shadow: 4px 4px 5px 4px grey;
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			color: #fff;
+			box-sizing: border-box;
+			padding: 20px;
+		}
+		#rotate {
+			line-height: 300px;
+			text-align: center;
+		}
+		#rotate:hover {
+			transition: transform 2s ease;
+			transform: rotate(360deg);
+		}
+
+		#linearG {
+			background-image: linear-gradient(to right, purple, #333);
+		}
+		#flex {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+		#flex div {
+			margin: 20px;
+			box-sizing: border-box;
+			padding: 2px;
+			border: 2px dashed #000;
+
+		}
+	</style>
+	<body>
+		<!-- 1. Text Effects -->
+		<!-- 1.1 Text Shadow -->
+		<h2 id="text-effect">TEXT SHADOW :)</h2>
+		<!-- 1.2 Word Wrap -->
+		<h2 id="word-wrap">oooooooooooooooooooooooooooooooo</h2>
+		<br />
+		<hr />
+
+		<!-- 2. Fonts CSS3 -->
+		<!-- 2.1 Font Family -->
+		<div>
+			<h2 id="font-family">
+				KUSTOM FONT
+				<img src="heart.png" alt="" id="transition-heart" />
+			</h2>
+		</div>
+		<br />
+		<hr />
+
+		<!-- 3. Animation CSS3 -->
+		<!-- 3.1 Batman running animation   -->
+		<div id="batman">
+			<img src="batman running.gif" alt="batman is running ! and so are you" />
+			<div id="pokimane-div">
+				<img src="pokemon.gif" alt="pokemon running" />
+			</div>
+		</div>
+		<br />
+		<hr />
+
+		<!-- 4. For transition see the font-family example -->
+
+		<!-- 5. CSS3 Columns -->
+		<div class="column-para">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod itaque
+			repellendus velit quisquam, rem dolorem, excepturi aperiam dicta
+			laudantium nam voluptates facilis at debitis minus odio sapiente commodi
+			assumenda aut doloribus, dignissimos facere quidem! Odio quidem quibusdam
+			quo vitae enim maiores exercitationem, expedita libero, animi deleniti
+			nobis facere cumque blanditiis. Consequatur commodi, tempore sapiente eos
+			alias, voluptas ipsum, nesciunt aut nulla totam labore facilis
+			voluptatibus dignissimos aspernatur perferendis enim quod eius
+			consequuntur necessitatibus non quas id. Nihil vitae adipisci quam atque
+			rerum repellat debitis deleniti expedita, pariatur, sint, iste dolores
+			omnis quis accusamus dolorum nam amet voluptatibus mollitia cupiditate
+			natus.
+		</div>
+		<br />
+		<hr />
+
+		<!-- 6. Backgrounds in CSS3 -->
+		<div id="mybg"></div>
+		<br />
+		<hr />
+
+		<!-- 7. Borders in CSS3 -->
+		<div>
+			<img
+				id="border"
+				src="https://images.pexels.com/photos/1982852/pexels-photo-1982852.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+				alt="girl pic"
+			/>
+		</div>
+		<br />
+		<hr />
+
+		<!-- 8. User Interface -->
+		<!-- 8.1 Resize -->
+		<div id="resize">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illum quia
+			nulla debitis aliquid nemo beatae ab eveniet officia repudiandae.
+		</div>
+
+		<!-- 9. Box Sizing -->
+		<div id="box-sizing">
+			<p>Box sizing is important</p>
+		</div>
+		<br />
+		<hr />
+
+		<!--10. Transformation -->
+		<!-- 10.1 Rotate -->
+		<div style="width: 300px; height: 300px; border: 2px solid #333">
+			<h2 id="rotate">About Us</h2>
+		</div>
+
+		<!-- 10.2 For scale see the heart element -->
+		<br />
+		<hr />
+
+		<!-- 11. Linear Gradient -->
+		<div
+			id="linearG"
+			style="
+				width: 100%;
+				height: 300px;
+				border: 2px solid #333;
+				border-radius: 15px;
+			"
+		></div>
+
+		<!-- 12. Flexbox -->
+		<div id="flex">
+			<div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+				accusantium delectus in, libero quis soluta alias omnis similique
+				ratione illum.
+			</div>
+			<div>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+				doloribus labore fuga dignissimos corrupti impedit tempora officiis,
+				vero temporibus nulla.
+			</div>
+			<div>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
+				accusamus eos tenetur molestias similique voluptas esse voluptatem
+				ratione magnam ab.
+			</div>
+		</div>
+	</body>
+</html>

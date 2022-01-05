@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !External CSS  */
+
+h1 {
+    color: red;
+}
+
+/* *input field for box model*/
+.boxModel {
+    width: 400px;
+    height: 200px;
+    background-color: red;
+}
+
+.boxModel input {
+    /* *between input and border => padding */
+    /* padding-left: 20px; */
+    padding: 20px;
+    /* *over border => margin */
+    margin: 50px;
+}
+
+#scrollBar {
+    width: 200px;
+    height: 100px;
+    border: 2px dashed black;
+
+    /* *overflow */
+    /* overflow: hidden; */
+    overflow: auto;
+}
+
+/* !position css */
+.father {
+    width: 500px;
+    height: 300px;
+    background: yellow;
+    position: relative;
+}
+
+.child1 {
+    width: 100px;
+    height: 60px;
+    background: black;
+    position: absolute;
+    left: 0;
+}
+
+.child2 {
+    width: 100px;
+    height: 60px;
+    background: green;
+    position: absolute;
+    right: 0;
+}
+
+.child3 {
+    width: 100px;
+    height: 60px;
+    background: red;
+    position: absolute;
+    bottom: 0;
+}
+
+.child4 {
+    width: 100px;
+    height: 60px;
+    background: violet;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* !NOTE: ⬆️ above divs are there after positioning absolute, but are stacked on each other so only the first div can be seen, and they are begind it.*/
+
+/* !NOTE: top, right, left, bottom can only be after using position property */
+/* 
+!CSS Tip to position text elements -
+    ?line-height: the height of parent div;
+    ?text-align: center; 
+
+*/
+
+/* !Menu bar */
+
+/* *float part  */
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+.logo {
+    width: 30%;
+    /*?Important Step*/
+    line-height: 80px;
+    text-align: center;
+    background-color: orange;
+    float: left;
+}
+
+.menu {
+    width: 70%;
+    line-height: 80px;
+    background-color: red;
+    float: right;
+}
+
+/* *display part  */
+ul {
+    list-style: none;
+    /* direction: rtl; */
+    text-align: right;
+}
+
+li {
+    display: inline-block;
+    border: 2px dashed black;
+    padding: 0 40px 0 40px;
+}
